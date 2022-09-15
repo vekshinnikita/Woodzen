@@ -15,7 +15,7 @@ def send(dict):
     send_mail(
         'ЗАКАЗ',
         plain_message,
-        'SUPPORT',
+        EMAIL_HOST_USER,
         recipient_list=[RECIPIENT_EMAIL],
         fail_silently=False,
         html_message=html_message
