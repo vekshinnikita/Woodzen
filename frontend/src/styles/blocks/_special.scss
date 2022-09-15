@@ -1,0 +1,236 @@
+.special{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    @media(max-width: 1000px){
+        
+    }
+
+    @media(max-width: 700px){
+        margin-top: 80px;
+    }
+
+    &__slider{
+        width: 86%;
+        @media(max-width: 700px){
+            width: 72%;
+        }
+    }
+
+    &__frame {
+        width: 100%;
+        max-width: 1300px;
+        position: relative;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        padding-bottom: 100px;
+
+        @media(max-width: 1300px){
+            max-width: 1000px;
+
+        }
+        @media(max-width: 1000px){
+            max-width: 700px;
+
+        }
+
+        @media(max-width: 700px){
+            padding-bottom: 50px;
+            
+        }
+        
+    }
+    &__img{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+
+        @media(max-width: 1300px){
+            height: 200px;
+            width: 200px;
+        }
+        img{
+            height: 100%;
+            pointer-events: none;
+        }
+    }
+    &__wrap {
+        position: relative;
+        display: flex;
+        margin-top: 100px;
+        @media(max-width: 1000px){
+            margin-top: 80px;
+        }
+        @media(max-width: 700px){
+            margin-top: 50px;
+
+        }
+    }
+    &__description {
+        text-align: center;
+        font-family: 'Inter';
+        font-style: normal;
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: #8D5F3E;
+    }
+    &__title {
+        display: block;
+        padding: 26px 0 0 56px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 36px;
+        color: $Brown-color;
+        
+
+        @media(max-width: 1000px){
+            font-size: 30px;
+        }
+        @media(max-width: 700px){
+            font-size: 24px;
+            padding: 0;
+            padding-top: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__vector {
+        position: absolute;
+        transform: translateX(-100%);
+        padding-top: 70px;
+
+        @media(max-width: 1000px){
+            width: 400px;
+            padding-top: 50px;
+        }
+        @media(max-width: 700px){
+            width: 330px;
+            padding-top: 60px;
+            transform: translateX(0);
+        }
+    }
+    &__slider-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            z-index: 2;
+            width: 5%;
+            flex: 1;
+            cursor: pointer;
+            img{
+                height: 70px;
+                width: 30px;
+            }
+
+            @media(max-width: 700px){
+                width: 10%;
+            }
+    }
+}
+
+
+.slick-dots{
+    bottom: -60px;
+    li{
+        display: inline-block;
+        border-radius: 100%;
+        width: 25px;
+        height: 25px;
+        z-index: 3;
+        background: #BBC0C8;
+
+        &:hover{
+            background: #D8C686;
+        }
+
+        button{
+            height: 100%;
+            width: 100%;
+        }
+
+        button::before{
+            content: ''
+        }
+
+        @media(max-width: 1300px){
+            width: 20px;
+            height: 20px;
+
+        }
+    }
+
+    .slick-active{
+        background: #D8C686;
+    }
+
+}
+
+
+
+//СТИЛИЗАЦИЯ ДЕФОЛТНЫХ ЗНАЧЕНИЙ С БИБЛИОТЕКИ 
+.owl-carousel .owl-item img {
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+}
+.owl-nav span {
+    display: none;
+}
+.owl-prev {
+    &:after {
+        content: '';
+        position: absolute;
+        top: -18%;
+        left: -40px;
+        z-index: 2;
+        width: 10%;
+        height: 100%;
+        // background: url(../icons/emblem/arrowL.svg) center no-repeat;
+    }
+}
+.owl-next {
+    &:after {
+        content: '';
+        position: absolute;
+        top: -18%;
+        right: -40px;
+        z-index: 2;
+        width: 10%;
+        height: 100%;
+        // background: url(../icons/emblem/arrowR.svg) center no-repeat;
+    }
+}
+
+// .owl-dots {
+//     display: none;
+// }
+
+.owl-theme .owl-dots .owl-dot span {
+        display: block;
+        width: 25px;
+        height: 25px;
+        z-index: 3;
+        background: #BBC0C8;
+
+}
+
+
+
+.owl-theme .owl-dots .owl-dot.active span{
+    background: #D8C686;
+}
+
+.owl-theme .owl-dots .owl-dot {
+    &:focus {
+        outline: none;
+    }
+}

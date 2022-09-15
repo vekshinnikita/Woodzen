@@ -1,0 +1,67 @@
+
+.blockPromo {
+    position: relative;
+    min-height: 600px;
+    background: url(../img/promoBg/promo.jpg)  center (center / cover) no-repeat;
+
+    &__btn {
+        position: absolute; 
+        font-weight: 400;
+        bottom: 22px;
+        right: 220px;
+        width: 263px;
+        height: 256px;
+        font-size: 20px;
+        background-color: $Cream-color;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 1.5s;
+        border:none;
+        cursor: pointer;
+        span {
+            position: absolute;
+            text-decoration: none;
+            color: #808690;
+            font-family: 'Inter';
+            font-style: normal;
+            @media(max-width: 1000px){
+                font-size: 18px;
+            }
+        }
+        &:hover {
+            box-shadow: 1px 1px 30px 25px rgba(233, 204, 204, 0.33);
+            background-color: #f6f7e6a8;
+            text-decoration: none;
+            transition: all .5s;
+            border: none;
+        }
+        &:focus {
+            outline: none;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 40%;
+            width: 72px;
+            height: 0px;
+            border: 1px solid #868FA0;
+
+            @media(max-width: 1000px){
+                width: 90px;
+            }
+        }
+
+        @media(max-width: 1000px){
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            width: 160px;
+            height: 160px;
+            right: 0;
+            text-align: center;
+        }
+    }
+}

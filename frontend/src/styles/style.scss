@@ -1,0 +1,48 @@
+@import 'libs/bootstrap-reboot.min';
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.show {
+    display: block;
+    transition: 0.5 all;
+}
+
+.hide {
+    display: none;
+}
+
+
+body {
+    overflow-x:hidden;  /*for horizontal scrolling*/
+}
+
+
+
+@import 'base/variables';
+@import 'blocks/animate';
+@import 'blocks/promo';
+@import 'blocks/blockPromo';   
+@import 'blocks/products';
+@import 'blocks/special';
+@import 'blocks/news';
+@import 'blocks/arrowUp';
+@import 'blocks/catalog';
+@import 'blocks/delivery';
+@import 'blocks/contacts';
+@import 'blocks/basket';
+@import 'blocks/logs';
+@import 'blocks/form';
+@import 'blocks/basketWrap';
+@import 'blocks/footer';
+@import 'blocks/breadCrumbs'

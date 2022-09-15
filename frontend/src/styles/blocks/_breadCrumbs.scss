@@ -1,0 +1,53 @@
+.bread-crumbs{
+    display: flex;
+    font-size: 22px;
+    gap:10px;
+    position: relative;
+    @media(max-width: 1300px){
+        font-size: 20px;
+    }
+    @media(max-width: 800px){
+        font-size: 18px;
+    }
+    @media(max-width: 600px){
+        font-size: 16px;
+    }
+
+    a{
+        color: $Brown-color;
+        font-size: inherit;
+        font-weight: 600;
+        
+        
+    }
+
+    span{
+        color: $Brown-color;
+        font-size: inherit;
+        font-weight: 600;
+
+    }
+
+    &__radius{
+        height: 95px;
+        width: 95px;
+        border-radius: 50%;
+        position: absolute;
+        left: -50px;
+        top:-30px;
+        z-index: -1;
+        background-color: rgba(234, 234, 234, 0.5);
+
+        @media(max-width: 800px){
+            display: none;
+        }
+    }
+
+    &__disabled{
+    color: #D0B580!important;
+    &:hover{
+        text-decoration: none!important;
+        cursor: default!important;
+    }
+}
+}

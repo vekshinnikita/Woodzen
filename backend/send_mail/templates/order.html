@@ -1,0 +1,45 @@
+<html>
+  <head></head>
+  <body>
+      {% block main %}
+        
+        <div>
+          <div><span>Имя:</span>  <span>{{first_name}}</span></div>
+          <div><span>Фамилия:</span>  <span>{{last_name}}</span></div>
+          <div><span>Электронная почта:</span>  <span>{{email}}</span></div>
+          <div><span>Телефон:</span>  <span>{{phone}}</span></div>
+          <div><span>Город:</span>  <span>{{city}}</span></div>
+          <div><span>Адрес:</span>  <span>{{address}}</span></div>
+          <div><span>Индекс:</span>  <span>{{index}}</span></div>
+        </div>
+
+        <div style="margin: 20px 0 ;">Заказ: </div>
+      
+        <table style="width: 100%; text-align: center;">
+            <tr>
+                <th>Товары</th>
+                <th>Тип товара</th>
+                <th>Материал</th>
+                <th>Кол-во</th>
+                <th>Цена</th>
+                <th>Сумма</th>
+            </tr>
+            {% for i in order %}
+
+              <tr>
+                <td>{{i.type.product_title}}</td>
+                <td>{{i.type.type_title}}</td>
+                <td>{{i.type.title}}</td>
+                <td>{{i.quantity}}</td>
+                <td>{{i.type.price}}</td>
+                <td>{{i.total_product}}</td>
+              </tr>
+
+            {% endfor %}
+        </table>
+
+        <div style="margin: 20px 0 ;">Итог: <b>{{total}}</b></div>
+
+      {% endblock main %}
+  </body>
+</html>

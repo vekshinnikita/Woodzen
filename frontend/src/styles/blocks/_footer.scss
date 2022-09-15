@@ -1,0 +1,197 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    height: 190px;
+    margin-top: 100px;
+
+    @media(max-width: 1300px){
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+    }
+    @media(max-width: 600px){
+        padding: 10px;
+        margin-top: 80px;
+    }
+
+    &__links {
+        display: grid;
+        grid-template-columns: repeat(4,minmax(50px, auto));
+        grid-template-rows: repeat(2, 65px);
+        column-gap: 60px;
+        row-gap: 30px;
+        a {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            color: $Brown-color;
+            @media(max-width: 600px){
+                font-size: 16px;
+            }
+            @media(max-width: 480px){
+                font-size: 14px;
+            }
+        }
+        @media(max-width: 1300px){
+            gap: 15px;
+            grid-template-rows: repeat(2, 50px);
+        }
+        @media(max-width: 700px){
+            gap: 15px;
+            grid-template-rows: repeat(2, 30px);
+            margin-top: 0;
+        }
+        @media(max-width: 480px){
+            gap: 1%;
+        }
+    }
+    &__subscribe-form{
+        display: flex;
+        align-items: center;
+        gap:20px;
+        height: auto;
+        max-height: 130px;
+        position: relative;
+
+        @media(max-width: 700px){
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p{
+            margin: 0 30px;
+            margin-top: 5px;
+            color: #d32f2f;
+            position: absolute;
+            bottom: 0;
+            font-size: 14px;
+
+            @media(max-width: 600px){
+                font-size: 12px;
+            }
+            @media(max-width: 700px){
+                bottom: -20px;
+            }
+        }
+
+    }
+    &__subscribe {
+        display: flex;
+        flex-direction: column;
+
+        @media(max-width: 1300px){
+            order: -1;
+        }
+        
+
+        input {
+            position: relative;
+            grid-column: 1/2;
+            width: 353px;
+            height: 76px;
+            border: 1px solid #868FA0;
+            border-radius: 50px;
+            padding: 25px 45px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
+            color: #808690;
+            &:focus {
+                outline: none;
+            }
+            @media(max-width: 700px){
+                width: 100%;
+                height: 60px;
+            }
+            @media(max-width: 700px){
+                font-size: 16px;
+            }
+        }
+        
+    }
+    &__vector{
+        width: 100%;
+        margin-top: 10px;
+        max-width: 320px;
+        display: none;
+        @media(max-width: 700px){
+            display: block;
+        }
+    }
+    &__send {
+        display: block;
+        width: 160px;
+        height: 160px;
+        border-radius: 100%;
+        border: none;
+        transform: translateY(-40px);
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        color: #868FA0;
+        transition: all .3s;
+        background: $Cream-color;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        &:hover {
+            box-shadow: 1px 1px 20px 5px rgba(237, 214, 214, 0.33);
+            background-color: #f6f7e6a8;
+            text-decoration: none;
+            transition: all .3s;
+            border: none;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: 27px;
+            margin-top: 37px;
+            width: 106px;
+            height: 0px;
+            border: 1px solid #868FA0;
+        }
+        &:focus {
+            outline: none;
+        }
+        @media(max-width: 700px){
+            display: none;
+        }
+    }
+    &__send-mobile{
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        height: 60px;
+        width: 50px;
+        background-color: rgba(0,0,0,0);
+        border: none;
+        
+        display: none;
+        @media(max-width: 700px){
+            display: flex;
+        }
+
+        &:focus{
+            outline: none;
+        }
+
+        img{
+            height: 60px;
+        }
+    }
+    &__title {
+        position: relative;
+        margin-left: 20px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $Brown-color;
+
+        @media(max-width: 700px){
+            margin-left: 0px;
+        }
+    }
+}
