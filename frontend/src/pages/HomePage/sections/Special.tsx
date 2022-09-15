@@ -8,19 +8,21 @@ const Special: FC = () => {
     const carousel = useRef<Slider>(null)
     const { isLoading, offers } = useOffers()
 
+    const offersLenth = offers?.length
+
     const settings = {
         dots: true,
-        infinite: true,
         speed: 500,
-        slidesToShow: 4,
+        infinity: true,
+        slidesToShow: Number(offersLenth) >= 4 ? 4 : offersLenth,
         slidesToScroll: 1,
         responsive: [
             {
             breakpoint: 1024,
             settings: {
-                slidesToShow: 2,
-                infinite: true,
-                dots: false
+                slidesToShow:  Number(offersLenth) >= 2 ? 2 : offersLenth,
+                dots: false,
+                infinity: true,
             }
             },
             {
@@ -70,3 +72,4 @@ const Special: FC = () => {
 }
 
 export default Special;
+
