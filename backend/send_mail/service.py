@@ -3,7 +3,8 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from news.models import Subscribers
-from backend.settings import RECIPIENT_EMAIL
+from backend.settings import RECIPIENT_EMAIL, EMAIL_HOST_USER
+
 
 
 def send(dict):
@@ -32,7 +33,7 @@ def send_mailing(data):
     send_mail(
         data['title'],
         plain_message,
-        'SUPPORT',
+        EMAIL_HOST_USER,
         recipient_list=recipients,
         fail_silently=False,
         html_message=html_message
