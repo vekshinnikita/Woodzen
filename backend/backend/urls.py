@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('rest_framework.urls')),
     path('_nested_admin/', include('nested_admin.urls')),   
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('api/products/', include('products.urls')),
     path('api/', include('send_mail.urls')),
     path('api/', include('news.urls')),

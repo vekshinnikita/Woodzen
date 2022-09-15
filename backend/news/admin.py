@@ -1,14 +1,23 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
-
+from ckeditor_uploader.widgets import CKEditorUploadingWidget
+from django import forms
 from .models import News, Subscribers
+
+class NewsAdminForm(forms.ModelForm):
+    description = forms.CharField(label="Описание", widget=CKEditorUploadingWidget())
+    
+    class Meta:
+        model = News
+        fields = "__all__"
 
 # Register your models here.
 @admin.register(News)
-class ProductAdmin(admin.ModelAdmin):
+class NewsAdmin(admin.ModelAdmin):
     list_display = ('title','get_image',"draft")
     save_on_top = True
     list_editable =("draft", )
+    form = NewsAdminForm
     readonly_fields = ("get_image",'created_at')
     fieldsets = (
         (None, {
