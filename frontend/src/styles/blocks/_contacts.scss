@@ -84,4 +84,7 @@
     flex-direction: column;
     padding: 0 20px;
     padding-top: 20px;
+    @media(max-width: 1000px){
+        padding-top: 80px;
+    }
 }
