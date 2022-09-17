@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const ContactPage: FC = () => {
     return (
-        <section id="Contacts" className="content fade ">
+        <section id="Contacts" className="content fade " style={{flex: 1}}>
             <div className="contacts">
                 <ul className="bread-crumbs">
                     <Link to='/'>Главная</Link>

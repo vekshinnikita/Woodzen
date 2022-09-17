@@ -10,7 +10,7 @@ const HomePage: FC = () => {
 
     return (
         
-    <section id="Home" className="content fade">
+    <section id="Home" className="content fade" style={{flex: 1}}>
         <div className="blockPromo">
             <div className="blockPromo__backImg"></div>
             <div className="blockPromo__btn" onClick={() => navigate('/catalog')}> 

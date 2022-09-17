@@ -26,11 +26,15 @@ interface IFormInput {
 
 const BasketComponent: FC<Props> = ({setOpen}) => {
 
-    const basket = useRecoilValue(Basket)
+    const [basket, setBasket] = useRecoilState(Basket)
     const basketPrice = useRecoilValue(BasketPrice)
 
+    const handleDelete = (item: any) => {
+        setBasket(basket => basket.filter(_item => _item.type.id != item.type.id))
+    }
+
     return (
-        <div className="wrapper">
+        <div className="wrapper" style={{flex: 1}}>
             <div className="basket__title-mobile">Товары</div>
         <div className="name">
             <div className="name__title">
@@ -47,7 +51,9 @@ const BasketComponent: FC<Props> = ({setOpen}) => {
             {basket.map(_item => (
             <div key={_item.type.id}>
                 <div className="total__subtitle">
-                        
+
+                    <div className="total__xmark" onClick={() => handleDelete(_item)}><img src="icons/emblem/xmark.svg"/></div>
+
                     <div className="total__product">{_item.type.product_title}</div>
 
                     <div className='total__field'>
@@ -72,6 +78,7 @@ const BasketComponent: FC<Props> = ({setOpen}) => {
                 </div>
                 <div className="divider"></div>
             </div>
+            
             ))}
             
         </div>
@@ -136,7 +143,7 @@ const Form: FC<Props>  = ({setOpen}) => {
     }
 
     return (
-        <form className="form" onSubmit={handleSubmit(onSubmit)}>
+        <form className="form" onSubmit={handleSubmit(onSubmit)} style={{flex: 1}}>
             <div className="form__wrapper">
                     <div className="form__title">Оформление заявки</div>
 

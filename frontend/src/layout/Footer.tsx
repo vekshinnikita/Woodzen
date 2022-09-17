@@ -1,6 +1,7 @@
 import { useSubscribe } from '@/adapters/news';
 import React, { FC } from 'react'
 import { useForm, SubmitHandler } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 interface IFormInput {
     email: string,
@@ -28,14 +29,14 @@ const Footer: FC = () => {
     return (
         <footer className="footer">
             <div className="footer__links">
-                <a href="#">О компании</a>
-                <a href="#">Продукция</a>
-                <a href="#">Отзывы</a>
-                <a href="#">Новости</a>
-                <a href="#">Прайс</a>
-                <a href="#">Акции</a>
-                <a href="#">Контакты</a>
-                <a href="#">Доставка</a>
+                <Link to="">О компании</Link>
+                <Link to="/catalog">Продукция</Link>
+                <Link to="">Отзывы</Link>
+                <Link to="">Новости</Link>
+                <Link to="">Прайс</Link>
+                <Link to="">Акции</Link>
+                <Link to="/contact">Контакты</Link>
+                <Link to="/delivery">Доставка</Link>
             </div>
             <form className="footer__subscribe" onSubmit={handleSubmit(onSubmit)}>
                 <div className="footer__title">Подписаться на наши новости:

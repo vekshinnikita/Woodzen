@@ -125,10 +125,6 @@ const Header: FC = () => {
                             </li>
                         ))}
                     </ul>
-
-                    <div className="promo__search">
-                        <img src="/icons/emblem/search.svg" alt="search"/>
-                    </div>
                     <Link to='/basket' onClick={() => setActive('basket')}> 
                         <div className="promo__basket">
                             <div className="promo__basket-circle"><span>{basketLength}</span></div>

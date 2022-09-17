@@ -6,7 +6,7 @@ const DeliveryPage: FC = () => {
     const navigate = useNavigate()
 
     return (
-        <section id="Delivery"  className="content fade ">
+        <section id="Delivery"  className="content fade " style={{flex: 1}}>
             <div className="delivery">
                 <div className="delivery__title">
                     Мы организовываем доставку по всей России!

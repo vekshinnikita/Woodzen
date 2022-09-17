@@ -24,7 +24,7 @@ const PopupMobile: FC<PropsPopup> = ({open, setOpen, item}) => {
                 timeout={200}
                 classNames='popup-anim'
             >
-            <ul className='catalog__popup-mobile' onClick={(e) => setOpen(0)}>
+            <ul className='catalog__popup-mobile' onClick={(e) => setOpen(0)} style={{flex: 1}}>
                 {item.types.map(type => (
                     
                     <li key={type.id}>

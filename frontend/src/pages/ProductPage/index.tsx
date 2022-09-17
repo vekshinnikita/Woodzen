@@ -59,7 +59,7 @@ const Popup: FC<PropsPopup> = ({open, item, setOpen}) => {
                 timeout={200}
                 classNames='popup-anim'
             >
-        <div className="logs__number">
+        <div className="logs__number" style={{flex: 1}}>
             <div data-counter className="logs__input">
                 <span 
                     onClick={() => {
