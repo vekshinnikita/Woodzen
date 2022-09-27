@@ -17,7 +17,6 @@ const menu = [
     ['delivery', 'Доставка'],
     ['contact', 'Контакты'],
     ['basket', 'Корзина'],
-    ['price', 'Прайс'],
 ]
 
 interface PropsMenu{

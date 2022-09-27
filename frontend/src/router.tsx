@@ -8,7 +8,6 @@ import CatalogPage from "./pages/CatalogPage";
 import ContactPage from "./pages/ContactPage";
 import DeliveryPage from "./pages/DeliveryPage";
 import HomePage from "./pages/HomePage";
-import PricePage from "./pages/PricePage";
 import ProductPage from "./pages/ProductPage";
 
 
@@ -19,7 +18,6 @@ const router = (
             <Header />
             <Routes>
                 <Route path='/' element={<HomePage/>}/>
-                <Route path='/price' element={<PricePage/>}/>
                 <Route path='/basket' element={<BasketPage/>}/>
                 <Route path='/delivery' element={<DeliveryPage/>}/>
                 <Route path='/catalog' element={<CatalogPage/>}/>
