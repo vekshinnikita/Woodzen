@@ -20,7 +20,7 @@
 ## Запуск контейнера
 Предварительно установить docker и docker-compose
 
-1. Выполнить команду   ```docker-compose bild```
+1. Выполнить команду   ```docker-compose build```
 
 2. Запустить проект командой ```docker-compose up -d```
 
